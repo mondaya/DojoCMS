@@ -1,8 +1,6 @@
 @{
-	ViewData["Title"] = "Login ";
+	ViewData["Title"] = "Login";
 }
-
-
 <div>
 	<nav class = "navbar navbar-inverse">
 		<div class ="container-fluid">
@@ -18,19 +16,12 @@
 		</div>
 	</nav>
 	<div class="sm-3 sidebar text-center">
-		<div class="">
+		<div class="col-sm-2 sidebar2">
 			<br />
 			<ul class = "nav nav-pills nav-stacked toggle">
 				<li><a href="#">Test3</a></li>
 				<li><a href="#">Test4</a></li>
 			</ul><br />
-			<div class="input-group">
-				<input type = "text" class = "form-control" placeholder = "Search Blog..."/>
-				<span class = "input-group-btn">
-				<button class="btn btn-default" type = "button">
-					<span class="glyphicon glyphicon-search"></span>
-				</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -41,5 +32,6 @@
 	<div>
 		<h5 class="font1"><span class="glyphicon glyphicon-time"></span> UserName Date Submitted </h5><br />
 		<p class="font1">Edit your post here</p>
+	</div>
 	</div>
 </div>

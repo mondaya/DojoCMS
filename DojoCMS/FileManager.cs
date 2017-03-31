@@ -20,10 +20,13 @@ namespace DojoCMS
             PathString = Path.Combine(PathString, UserName, PageName);
             System.IO.Directory.CreateDirectory(PathString);
         }
-        public static void MakePageFile(string UserName, string PageName, string HTMLString)
+        public static void MakePageFile(String UserName, String PageName, String HTMLString)
         {
-            MakeUserDirectory(String.Format(Directory.GetCurrentDirectory() +  "/{0}", UserName));
-            string PathString = String.Format(Directory.GetCurrentDirectory() +  "/{0}.csthml",PageName);
+        
+            String PathString = String.Format("{0}/{1}.cshml",Directory.GetCurrentDirectory(),PageName);
+            Console.WriteLine(PathString);
+            Console.WriteLine(PageName);
+            Console.ReadLine();
 
             System.IO.File.WriteAllText(PathString, HTMLString);
             File.SetAttributes(PathString, FileAttributes.Normal);
