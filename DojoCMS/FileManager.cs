@@ -22,10 +22,8 @@ namespace DojoCMS
         }
         public static void MakePageFile(string UserName, string PageName, string HTMLString)
         {
-          
-            string PathString = Directory.GetCurrentDirectory();
-
-            PathString = Path.Combine(PathString, UserName, PageName, ".cshtml");
+            MakeUserDirectory(String.Format(Directory.GetCurrentDirectory() +  "/{0}", UserName));
+            string PathString = String.Format(Directory.GetCurrentDirectory() +  "/{0}.csthml",PageName);
 
             System.IO.File.WriteAllText(PathString, HTMLString);
             File.SetAttributes(PathString, FileAttributes.Normal);
