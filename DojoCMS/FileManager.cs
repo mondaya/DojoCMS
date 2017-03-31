@@ -22,12 +22,9 @@ namespace DojoCMS
         }
         public static void MakePageFile(String UserName, String PageName, String HTMLString)
         {
-        
-            String PathString = String.Format("{0}/{1}.cshml",Directory.GetCurrentDirectory(),PageName);
-            Console.WriteLine(PathString);
-            Console.WriteLine(PageName);
-            Console.ReadLine();
 
+            string PathString = Directory.GetCurrentDirectory();
+            PathString = Path.Combine(PathString, UserName, PageName, PageName+".cshtml");
             System.IO.File.WriteAllText(PathString, HTMLString);
             File.SetAttributes(PathString, FileAttributes.Normal);
         }

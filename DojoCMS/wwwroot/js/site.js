@@ -24,11 +24,15 @@ $(document).ready(function() {
         // returner["mainBody"]["createdDate"] = "%created_at%";
 
         // NEED TO ADD ALL EDITABLE FIELDS, ONES NOT IN THE SKELETON.
-
-
-
-        $.post( "CreateFile", { returner }, function( data ) {
-            console.log( data ); // Return data
-        }, "json");
+        $.ajax({
+            type: "POST",
+            url: "/CreateFile",
+            data: {HTMLString: returner},
+            success: function(data){
+                alert(data.Result);
+            },
+            dataType: "json",
+            traditional: true
+        });
     });
 });

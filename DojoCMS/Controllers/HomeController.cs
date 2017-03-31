@@ -50,8 +50,7 @@ namespace DojoCMS.Controllers
                     User newUser = new User{
                         name = model.name,
                         email = model.email,
-                        password = model.Password,
-                        username = model.username
+                        password = model.Password
                   };
                     _context.Users.Add(newUser);
                     _context.SaveChanges();

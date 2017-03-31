@@ -16414,6 +16414,7 @@
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 15.0.0",
       "Microsoft.NETCore.App >= 1.0.0",
+      "MySql.Data >= 7.0.7-m61",
       "MySql.Data.EntityFrameworkCore >= 7.0.7-m61",
       "xunit >= 2.2.0",
       "xunit.runner.visualstudio >= 2.2.0"
