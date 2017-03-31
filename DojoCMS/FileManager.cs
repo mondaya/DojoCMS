@@ -24,7 +24,8 @@ namespace DojoCMS
         {
           
             string PathString = Directory.GetCurrentDirectory();
-            PathString = Path.Combine(PathString,"Index.cshtml");
+
+            PathString = Path.Combine(PathString, UserName, PageName, ".cshtml");
 
             System.IO.File.WriteAllText(PathString, HTMLString);
             File.SetAttributes(PathString, FileAttributes.Normal);
