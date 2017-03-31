@@ -4,8 +4,7 @@
             "version": "1.0.0",
             "type": "platform"
         },
-        "Microsoft.AspNetCore.Mvc": "1.0.0",
-        "MySql.Data": "7.0.6-IR31",
+        "Microsoft.AspNetCore.Mvc": "1.0.0",        
         "Microsoft.AspNetCore.StaticFiles": "1.0.0",
         "Microsoft.AspNetCore.Session": "1.0.0",
         "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
@@ -16,6 +15,7 @@
         "Microsoft.NET.Test.Sdk": "15.0.0",
         "xunit":"2.2.0",
         "xunit.runner.visualstudio":"2.2.0"
+        
     },
         
     "frameworks": {

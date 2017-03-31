@@ -17,6 +17,11 @@ namespace DojoCMS.Controllers
          public HomeController(CmsContext context)
         {
             _context = context;
+            
+            HtmlTree tree = new HtmlTree(); 
+            tree.buildDefault();
+            FileManager.MakePageFile("monday", "blog1", tree.toHtml());
+            
         }
 
         [HttpGet]

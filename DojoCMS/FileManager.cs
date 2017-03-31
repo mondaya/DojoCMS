@@ -5,23 +5,27 @@ namespace DojoCMS
 {
     public class FileManager
     {
-        static void MakeUserDirectory(string UserName)
+
+        
+        public static void MakeUserDirectory(string UserName)
         {
             string PathString = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             Path.Combine(PathString, UserName);
             System.IO.Directory.CreateDirectory(PathString);
         }
-        static void MakeUserViewsDirectory(string UserName, string PageName)
+        public static void MakeUserViewsDirectory(string UserName, string PageName)
         {
             string PathString = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             Path.Combine(PathString, UserName, PageName);
             System.IO.Directory.CreateDirectory(PathString);
         }
-        static void MakePageFile(string UserName, string PageName, string HTMLString)
+        public static void MakePageFile(string UserName, string PageName, string HTMLString)
         {
             string PathString = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             Path.Combine(PathString, UserName, PageName, ".cshtml");
+            
             System.IO.File.WriteAllText(PathString, HTMLString);
+            File.SetAttributes(PathString, FileAttributes.Normal);
         }
         static void WriteToFile(string PageText)
         {
